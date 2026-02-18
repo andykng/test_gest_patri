@@ -225,7 +225,7 @@ export const Scene6CTA = ({ startFrame = 0 }) => {
           opacity: logoOpacity,
         }}
       >
-        <TicketCGLogo scale={0.65} glowIntensity={0} />
+        <TicketCGLogo scale={0.32} glowIntensity={0} />
       </div>
     </div>
   );

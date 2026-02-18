@@ -159,7 +159,7 @@ export const Scene3Solution = ({ startFrame = 0 }) => {
           gap: '20px',
         }}
       >
-        <TicketCGLogo scale={1.9} glowIntensity={logoGlow} />
+        <TicketCGLogo scale={0.85} glowIntensity={logoGlow} />
 
         {/* Sous-titre avec glow bleu */}
         <div
