@@ -171,11 +171,13 @@ export const Scene4Processus = ({ startFrame = 0 }) => {
   const totalDuration = STEPS.length * STEP_DURATION;
 
   // Quelle etape est active
-  const currentStepIndex = Math.min(
+  const currentStepIndex = Math.max(0, Math.min(
     Math.floor(localFrame / STEP_DURATION),
     STEPS.length - 1
-  );
-  const stepLocalFrame = localFrame % STEP_DURATION;
+  ));
+  const stepLocalFrame = Math.max(0, localFrame) % STEP_DURATION;
+  const currentStep = STEPS[currentStepIndex];
+  if (!currentStep) return null;
 
   // Transition slash
   const transitionFrame = stepLocalFrame;
@@ -215,7 +217,7 @@ export const Scene4Processus = ({ startFrame = 0 }) => {
 
       {/* Etape courante */}
       <StepDisplay
-        step={STEPS[currentStepIndex]}
+        step={currentStep}
         localFrame={stepLocalFrame}
         fps={fps}
         isActive={true}

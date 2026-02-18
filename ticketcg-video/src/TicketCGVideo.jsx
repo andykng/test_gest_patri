@@ -29,7 +29,7 @@ export const TicketCGVideo = () => {
 
   // Determine quelle(s) scene(s) afficher
   const activeScenes = SCENES.filter(
-    ({ start, end }) => frame >= start - 10 && frame <= end + 10
+    ({ start, end }) => frame >= start && frame <= end
   );
 
   return (
