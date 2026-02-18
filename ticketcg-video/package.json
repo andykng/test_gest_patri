@@ -1,0 +1,20 @@
+{
+  "name": "ticketcg-video",
+  "version": "1.0.0",
+  "description": "TicketCG promotional video - La billetterie du Congo",
+  "scripts": {
+    "start": "remotion studio src/index.jsx",
+    "render": "remotion render src/index.jsx TicketCGVideo out/ticketcg-video.mp4",
+    "build": "remotion render src/index.jsx TicketCGVideo out/ticketcg-video.mp4 --codec h264",
+    "still": "remotion still src/index.jsx TicketCGVideo out/preview.png"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@remotion/cli": "^4.0.424",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "remotion": "^4.0.424"
+  }
+}
